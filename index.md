@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "Light Rider | Docs"
-  text: "Documentation for Light Rider's products and services."
-  tagline: My great project tagline
+  name: "Light Rider Inc."
+  text: "Documentation"
+  tagline: Documentation for Light Rider's products and services
   actions:
     - theme: brand
       text: Markdown Examples
@@ -15,11 +15,11 @@ hero:
       link: /api-examples
 
 features:
-  - title: Feature A
+  - title: Quantum Light
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
+  - title: Cloud Quantum Platform
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
+  - title: Entropy as a Service
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 

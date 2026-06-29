@@ -2,3 +2,52 @@
   height: 18px;
   width: auto;
 }
+
+:root {
+  /* ── Fonts ── */
+  --vp-font-family-base: "IBM Plex Sans", sans-serif; /* body / UI font */
+  --vp-font-family-mono: "IBM Plex Mono", monospace; /* code blocks */
+
+  /* brand colors */
+  --vp-c-brand-1: #ef3b39 !important;
+  --vp-c-brand-2: #ffcd34 !important;
+  --vp-c-brand-3: #f26739 !important;
+  --vp-c-brand-soft: #f25143 !important;
+
+  /* primary button */
+  --vp-button-brand-bg: var(--vp-c-brand-1) !important;
+  --vp-button-brand-hover-bg: var(--vp-c-brand-soft) !important;
+  --vp-button-brand-active-bg: var(--vp-c-brand-soft) !important;
+  --vp-button-brand-text: #ffffff !important;
+  --vp-button-brand-hover-text: #ffffff !important;
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-hover-border: transparent;
+
+  /* hero section */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    90deg,
+    #f26739,
+    #ef3b39
+  ) !important;
+}
+
+h1 {
+  font-family: "Science Gothic", sans-serif;
+  font-weight: 500 !important;
+
+  .name,
+  .text {
+    font-weight: 500 !important;
+  }
+}
+
+.VPButton,
+.VPFeature {
+  border-radius: 2px !important;
+}
+
+.VPLink.active {
+  color: var(--vp-c-brand-3) !important;
+  font-weight: 500 !important;
+}
