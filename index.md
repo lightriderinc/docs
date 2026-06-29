@@ -6,6 +6,7 @@ hero:
   name: "Light Rider Inc."
   text: "Documentation"
   tagline: Documentation for Light Rider's products and services
+  image: { light: "/grid-pattern-light.svg", dark: "/grid-pattern-dark.svg", alt: "Grid pattern" }
   actions:
     - theme: brand
       text: Markdown Examples
@@ -16,10 +17,13 @@ hero:
 
 features:
   - title: Quantum Light
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    details: Two generations of true uncompromised secure connection infrastructure.
+    linkText: Coming soon
   - title: Cloud Quantum Platform
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    details: Unified access to quantum hardware backends and Light Rider's services in a single environment.
+    linkText: Coming soon
   - title: Entropy as a Service
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    details: Quantum-derived entropy for secure communications, cryptographic workflows, AI training data, and randomness-dependent applications.
+    linkText: Coming soon
 ---
 
