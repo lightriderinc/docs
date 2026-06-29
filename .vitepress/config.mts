@@ -1,29 +1,37 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Light Rider Docs",
   description: "Documentation for Light Rider's products and services.",
-  base: '/docs/',
+  base: "/docs/",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+
+    logo: {
+      light: "/LR-logo-light.png",
+      dark: "/LR-logo-dark.png",
+      alt: "Light Rider Logo",
+    },
+    siteTitle: false,
+
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: "Home", link: "/" },
+      { text: "Examples", link: "/markdown-examples" },
     ],
 
     sidebar: [
       {
-        text: 'Examples',
+        text: "Examples",
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
+          { text: "Markdown Examples", link: "/markdown-examples" },
+          { text: "Runtime API Examples", link: "/api-examples" },
+        ],
+      },
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
-  }
-})
+      { icon: "github", link: "https://github.com/vuejs/vitepress" },
+    ],
+  },
+});
