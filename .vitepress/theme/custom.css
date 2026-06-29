@@ -65,6 +65,11 @@ h1 {
   font-weight: 500 !important;
 }
 
+.VPSidebarItem.level-1.is-active>.item .link>.text {
+  color: var(--vp-c-brand-3) !important;
+  font-weight: 500 !important;
+}
+
 .VPHero .container .image .image-container .VPImage.image-src {
   max-width: 400px !important;
   max-height: auto !important;
