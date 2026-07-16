@@ -75,6 +75,10 @@ h1 {
   max-height: auto !important;
 }
 
+.VPFeature.link:hover {
+    border-color: var(--vp-c-brand-3) !important;
+}
+
 .tagline {
   font-weight: 400 !important;
   font-size: 1.2rem !important;
