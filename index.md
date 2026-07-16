@@ -16,14 +16,14 @@ hero:
       link: /api-examples
 
 features:
-  - title: Quantum Light
-    details: Two generations of true uncompromised secure connection infrastructure.
-    linkText: Coming soon
-  - title: Cloud Quantum Platform
-    details: Unified access to quantum hardware backends and Light Rider's services in a single environment.
-    linkText: Coming soon
+  - title: Light Rider SDK
+    details: Quantum circuit simulation with IQM cloud submission, quantum random numbers, and QRNG synthetic data with provable provenance.
+    link: sdk/getting-started
+    linkText: Learn more
   - title: Entropy as a Service
     details: Quantum-derived entropy for secure communications, cryptographic workflows, AI training data, and randomness-dependent applications.
     linkText: Coming soon
+  - title: Light Rider Cloud platform
+    details: Unified access to quantum hardware backends and Light Rider's services in a single environment.
+    linkText: Coming soon
 ---
-
