@@ -7,6 +7,8 @@ export default defineConfig({
   base: "/docs/",
 
   head: [
+    ['link', { rel: 'icon', href: '/docs/favicon.ico' }],
+    
     [
       "link",
       {
