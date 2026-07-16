@@ -9,11 +9,12 @@ hero:
   image: { light: "/grid-pattern-light.svg", dark: "/grid-pattern-dark.svg", alt: "Grid pattern" }
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Get started with SDK
+      link: /sdk/getting-started
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Get started with EMS
+      link: /entropy/quickstart
+
 
 features:
   - title: Light Rider SDK
