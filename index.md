@@ -22,7 +22,8 @@ features:
     linkText: Learn more
   - title: Entropy as a Service
     details: Quantum-derived entropy for secure communications, cryptographic workflows, AI training data, and randomness-dependent applications.
-    linkText: Coming soon
+    link: entropy/getting-started
+    linkText: Learn more
   - title: Light Rider Cloud platform
     details: Unified access to quantum hardware backends and Light Rider's services in a single environment.
     linkText: Coming soon

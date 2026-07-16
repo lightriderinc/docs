@@ -15,7 +15,7 @@
   --vp-c-brand-soft: #f25143 !important;
 
   --vp-c-bg: #ffffff !important;
-  --vp-c-bg-soft: #EAEAEA !important;
+  --vp-c-bg-soft: #eaeaea !important;
 
   --vp-custom-block-tip-bg: var(--vp-c-bg-soft) !important;
   --vp-custom-block-info-bg: rgba(94, 166, 229, 0.25);
@@ -37,12 +37,12 @@
     #ef3b39
   ) !important;
 
-    --vp-home-hero-image-background-image: transparent !important;
+  --vp-home-hero-image-background-image: transparent !important;
 }
 
 .dark {
   --vp-c-bg: #090909 !important;
-  --vp-c-bg-soft: #1A1A1A !important;
+  --vp-c-bg-soft: #1a1a1a !important;
 }
 
 h1 {
@@ -65,7 +65,7 @@ h1 {
   font-weight: 500 !important;
 }
 
-.VPSidebarItem.level-1.is-active>.item .link>.text {
+.VPSidebarItem.level-1.is-active > .item .link > .text {
   color: var(--vp-c-brand-3) !important;
   font-weight: 500 !important;
 }
@@ -76,7 +76,7 @@ h1 {
 }
 
 .VPFeature.link:hover {
-    border-color: var(--vp-c-brand-3) !important;
+  border-color: var(--vp-c-brand-3) !important;
 }
 
 .VPFeature:not(.link) .link-text-icon {
@@ -88,17 +88,17 @@ h1 {
   font-size: 1.2rem !important;
 }
 
-.pager-link, .custom-block {
+.pager-link,
+.custom-block {
   border-radius: 2px !important;
 }
-
 
 .custom-block.tip {
   border-left: 5px solid var(--vp-c-brand-2) !important;
 }
 
 .custom-block.info {
-  border-left: 5px solid #5EA6E5 !important;
+  border-left: 5px solid #5ea6e5 !important;
 }
 
 .custom-block.warning {
@@ -107,4 +107,34 @@ h1 {
 
 .custom-block.danger {
   border-left: 5px solid #ff1232 !important;
+}
+
+/* 404 page */
+
+.NotFound .code {
+  font-family: "Science Gothic", sans-serif;
+  font-weight: 500 !important;
+  font-size: 6rem !important;
+  background-image: linear-gradient(
+    to top,
+    var(--vp-c-brand-3),
+    var(--vp-c-brand-1)
+  );
+  color: #0000;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: 16px;
+}
+
+.NotFound .action .link {
+  border-radius: 2px !important;
+  padding: 8px 16px !important;
+
+  &:hover {
+    border-color: var(--vp-c-brand-1) !important;
+    color: var(--vp-c-brand-1) !important;
+    background-color: #f87c5612 !important;
+
+  }
+
 }
