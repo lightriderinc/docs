@@ -42,6 +42,8 @@ export default defineConfig({
     siteTitle: false,
 
     nav: [
+      { text: "SDK", link: "sdk/getting-started" },
+      { text: "EMS", link: "entropy/introduction" },
       { text: "Platform", link: "https://platform.lightriderinc.com/" },
       { text: "Light Rider Website", link: "https://www.lightriderinc.com/" },
     ],
@@ -50,6 +52,7 @@ export default defineConfig({
       "/sdk/": [
         {
           text: "Light Rider SDK",
+          collapsed: true,
           items: [
             { text: "Getting Started", link: "/sdk/getting-started" },
 
@@ -60,6 +63,58 @@ export default defineConfig({
             },
             { text: "Synthetic Data", link: "/sdk/synthetic-data" },
           ],
+        },
+      ],
+      "/entropy/": [
+        {
+          text: "Entropy Management System",
+          collapsed: true,
+          items: [
+            {
+              text: "What is Light Rider EMS?",
+              link: "/entropy/introduction",
+            },
+            { text: "Quickstart", link: "/entropy/quickstart" },
+          ],
+        },
+        {
+          text: "Request entropy",
+          collapsed: true,
+          items: [
+            { text: "Policies", link: "/entropy/policies" },
+            {
+              text: "Multi-source extraction",
+              link: "/entropy/multi-source",
+            },
+            { text: "Streaming entropy", link: "/entropy/streaming" },
+          ],
+        },
+        {
+          text: "Verify & audit",
+          collapsed: true,
+          items: [
+            { text: "Receipts & verification", link: "/entropy/receipts" },
+          ],
+        },
+        {
+          text: "Operate",
+          collapsed: true,
+          items: [
+            {
+              text: "Sources & collectors",
+              link: "/entropy/sources-collectors",
+            },
+          ],
+        },
+        {
+          text: "Build",
+          collapsed: true,
+          items: [{ text: "Synthetic data", link: "/entropy/synthetic-data" }],
+        },
+        {
+          text: "Reference",
+          collapsed: true,
+          items: [{ text: "API reference", link: "/entropy/api-reference" }],
         },
       ],
     },

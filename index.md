@@ -20,9 +20,9 @@ features:
     details: Quantum circuit simulation with IQM cloud submission, quantum random numbers, and QRNG synthetic data with provable provenance.
     link: sdk/getting-started
     linkText: Learn more
-  - title: Entropy as a Service
+  - title: Entropy Management System
     details: Quantum-derived entropy for secure communications, cryptographic workflows, AI training data, and randomness-dependent applications.
-    link: entropy/getting-started
+    link: entropy/introduction
     linkText: Learn more
   - title: Light Rider Cloud platform
     details: Unified access to quantum hardware backends and Light Rider's services in a single environment.
