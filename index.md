@@ -6,7 +6,6 @@ hero:
   name: "Light Rider Inc."
   text: "Documentation"
   tagline: Documentation for Light Rider's products and services
-  image: { light: "/grid-pattern-light.svg", dark: "/grid-pattern-dark.svg", alt: "Grid pattern" }
   actions:
     - theme: brand
       text: Get started with SDK
