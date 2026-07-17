@@ -4,7 +4,7 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   title: "Light Rider Docs",
   description: "Documentation for Light Rider's products and services.",
-  base: "/docs/",
+  base: "/",
 
   head: [
     ['link', { rel: 'icon', href: '/docs/favicon.ico' }],
