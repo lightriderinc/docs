@@ -7,7 +7,7 @@ export default defineConfig({
   base: "/",
 
   head: [
-    ['link', { rel: 'icon', href: '/docs/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
     
     [
       "link",
