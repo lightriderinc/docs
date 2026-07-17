@@ -37,8 +37,8 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
 
     logo: {
-      light: "/LR-logo-light.png",
-      dark: "/LR-logo-dark.png",
+      light: "/LR-docs-logo-light.png",
+      dark: "/LR-docs-logo-dark.png",
       alt: "Light Rider Logo",
     },
     siteTitle: false,
