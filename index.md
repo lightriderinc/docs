@@ -17,7 +17,7 @@ hero:
 
 features:
   - title: Light Rider SDK
-    details: Quantum circuit simulation with IQM cloud submission, quantum random numbers, and QRNG synthetic data with provable provenance.
+    details: Quantum circuits, stabilizer and surface-code QEC, IQM cloud submission, quantum random numbers, and QRNG synthetic data.
     link: sdk/getting-started
     linkText: Learn more
   - title: Entropy Management System
