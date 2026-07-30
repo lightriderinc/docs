@@ -1,11 +1,15 @@
 # Light Rider SDK
 
-The `lightrider` package offers quantum circuit simulation, quantum random numbers, and QRNG-driven synthetic data — in one lightweight, NumPy-only package.
+The `lightrider` package provides quantum circuit simulation, stabilizer and
+surface-code experiments, IQM cloud jobs, quantum random numbers, attested
+entropy, and QRNG-driven synthetic data.
+
+> **Current documentation:** SDK 1.3.0
 
 ## Installation
 
 ```
-pip install lightrider             # core (NumPy only)
+pip install lightrider
 pip install "lightrider[pandas]"   # + pandas DataFrame support
 ```
 
@@ -31,8 +35,9 @@ job = get_backend("statevector").run(circ, shots=1000, seed=42)
 print(job.result().counts)   # {'00': 507, '11': 493}
 ```
 
-## Three core capabilities
+## Four core capabilities
 
 - **[Quantum Circuits](/sdk/quantum-circuits)** — build and run quantum circuits with local simulators or IQM cloud hardware.
+- **[Stabilizer & QEC](/sdk/stabilizer-qec)** — simulate Pauli noise, the nine-qubit surface code, and fault-tolerant logical Hadamard.
 - **[Quantum Random Numbers](/sdk/quantum-random-numbers)** — draw numpy-compatible randomness from real quantum entropy sources.
 - **[Synthetic Data with Provenance](/sdk/synthetic-data)** — generate tabular synthetic data where every random draw is quantum and attributable.
