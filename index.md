@@ -11,9 +11,6 @@ hero:
       text: Get started with SDK
       link: /sdk/getting-started
     - theme: alt
-      text: Get started with EMS
-      link: /entropy/quickstart
-    - theme: alt
       text: Get started with the Platform
       link: /platform/getting-started
 
