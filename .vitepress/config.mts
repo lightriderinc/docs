@@ -46,7 +46,8 @@ export default defineConfig({
     nav: [
       { text: "SDK", link: "sdk/getting-started" },
       { text: "EMS", link: "entropy/introduction" },
-      { text: "Platform", link: "https://platform.lightriderinc.com/" },
+      { text: "Platform", link: "platform/introduction" },
+      { text: "Launch Platform", link: "https://platform.lightriderinc.com/" },
       { text: "Light Rider Website", link: "https://www.lightriderinc.com/" },
     ],
 
@@ -118,6 +119,40 @@ export default defineConfig({
           text: "Reference",
           collapsed: true,
           items: [{ text: "API reference", link: "/entropy/api-reference" }],
+        },
+      ],
+      "/platform/": [
+        {
+          text: "Get started",
+          collapsed: true,
+          items: [
+            {
+              text: "What is Light Rider Cloud?",
+              link: "/platform/introduction",
+            },
+            { text: "Getting started", link: "/platform/getting-started" },
+          ],
+        },
+        {
+          text: "Compute",
+          collapsed: true,
+          items: [
+            { text: "Dashboard", link: "/platform/dashboard" },
+            { text: "Backends", link: "/platform/backends" },
+            { text: "Jobs & results", link: "/platform/jobs" },
+          ],
+        },
+        {
+          text: "Explore",
+          collapsed: true,
+          items: [{ text: "Applications", link: "/platform/applications" }],
+        },
+        {
+          text: "Account",
+          collapsed: true,
+          items: [
+            { text: "API keys", link: "/platform/api-keys" },
+          ],
         },
       ],
     },

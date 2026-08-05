@@ -36,3 +36,4 @@ The SDK is the intended consumer interface — it pins the server key and verifi
 -   [Quickstart](/entropy/quickstart) — install an SDK and request your first attested bytes.
 -   [Policies](/entropy/policies) — choose the quality tier your application needs.
 -   [Receipts & verification](/entropy/receipts) — understand and independently verify attestations.
+-   [Light Rider Cloud platform](/platform/applications) — generate and use entropy interactively from the Dashboard and Applications pages, no code required.

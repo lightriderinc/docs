@@ -13,6 +13,9 @@ hero:
     - theme: alt
       text: Get started with EMS
       link: /entropy/quickstart
+    - theme: alt
+      text: Get started with the Platform
+      link: /platform/getting-started
 
 
 features:
@@ -26,5 +29,6 @@ features:
     linkText: Learn more
   - title: Light Rider Cloud platform
     details: Unified access to quantum hardware backends and Light Rider's services in a single environment.
-    linkText: Coming soon
+    link: platform/introduction
+    linkText: Learn more
 ---

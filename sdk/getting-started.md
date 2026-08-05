@@ -41,3 +41,5 @@ print(job.result().counts)   # {'00': 507, '11': 493}
 - **[Stabilizer & QEC](/sdk/stabilizer-qec)** — simulate Pauli noise, the nine-qubit surface code, and fault-tolerant logical Hadamard.
 - **[Quantum Random Numbers](/sdk/quantum-random-numbers)** — draw numpy-compatible randomness from real quantum entropy sources.
 - **[Synthetic Data with Provenance](/sdk/synthetic-data)** — generate tabular synthetic data where every random draw is quantum and attributable.
+
+Prefer a web UI over writing code? The **[Light Rider Cloud platform](/platform/introduction)** covers the same circuit submission through a dashboard, with self-serve API keys for scripting against it directly.
