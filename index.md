@@ -20,12 +20,13 @@ features:
     details: Quantum circuits, stabilizer and surface-code QEC, IQM cloud submission, quantum random numbers, and QRNG synthetic data.
     link: sdk/getting-started
     linkText: Learn more
-  - title: Entropy Management System
-    details: Quantum-derived entropy for secure communications, cryptographic workflows, AI training data, and randomness-dependent applications.
-    link: entropy/introduction
-    linkText: Learn more
   - title: Light Rider Cloud platform
     details: Unified access to quantum hardware backends and Light Rider's services in a single environment.
     link: platform/introduction
     linkText: Learn more
+  - title: Entropy Management System
+    details: Quantum-derived entropy for secure communications, cryptographic workflows, AI training data, and randomness-dependent applications.
+    link: entropy/introduction
+    linkText: Learn more
+
 ---

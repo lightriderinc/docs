@@ -7,8 +7,8 @@ export default defineConfig({
   base: "/",
 
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
-    
+    ["link", { rel: "icon", href: "/favicon.ico" }],
+
     [
       "link",
       {
@@ -45,8 +45,8 @@ export default defineConfig({
 
     nav: [
       { text: "SDK", link: "sdk/getting-started" },
-      { text: "EMS", link: "entropy/introduction" },
       { text: "Platform", link: "platform/introduction" },
+      { text: "EMS", link: "entropy/introduction" },
       { text: "Launch Platform", link: "https://platform.lightriderinc.com/" },
       { text: "Light Rider Website", link: "https://www.lightriderinc.com/" },
     ],
@@ -150,9 +150,7 @@ export default defineConfig({
         {
           text: "Account",
           collapsed: true,
-          items: [
-            { text: "API keys", link: "/platform/api-keys" },
-          ],
+          items: [{ text: "API keys", link: "/platform/api-keys" }],
         },
       ],
     },
