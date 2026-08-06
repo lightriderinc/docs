@@ -38,6 +38,6 @@ print(job.result().counts)   # {'00': 507, '11': 493}
 ## Four core capabilities
 
 - **[Quantum Circuits](/sdk/quantum-circuits)** — build and run quantum circuits with local simulators or IQM cloud hardware.
-- **[Stabilizer & QEC](/sdk/stabilizer-qec)** — simulate Pauli noise, the nine-qubit surface code, and fault-tolerant logical Hadamard.
+- **[Quantum Error Correction](/sdk/stabilizer-qec)** — run circuit-level QEC experiments on surface, repetition, five-qubit, and color codes, with PyMatching decoding.
 - **[Quantum Random Numbers](/sdk/quantum-random-numbers)** — draw numpy-compatible randomness from real quantum entropy sources.
 - **[Synthetic Data with Provenance](/sdk/synthetic-data)** — generate tabular synthetic data where every random draw is quantum and attributable.

@@ -22,6 +22,28 @@ The primitive gate set:
 | Single-qubit, parameterized | `rx` `ry` `rz` `p` `r` `u` |
 | Two-qubit | `cx` `cy` `cz` `ch` `swap` `cp` `rxx` `ryy` `rzz` |
 | Three-qubit | `ccx` `cswap` |
+| Pauli errors | `x_error` `y_error` `z_error` |
+| Noise channels | `depolarize1` `depolarize2` `pauli_channel_1` |
+| Basis measurements | `measure` `measure_x` `measure_y` |
+| Basis resets | `reset` `reset_x` `reset_y` |
+
+Errors, noise channels, and basis measurements/resets in action:
+
+```python
+from lightrider import Circuit, get_backend
+
+circuit = Circuit(1)
+circuit.h(0)
+circuit.depolarize1(1e-4, 0)
+circuit.measure_x(0)
+
+result = get_backend("stabilizer").run(
+    circuit,
+    shots=100_000,
+    seed=7,
+).result()
+print(result.counts)
+```
 
 Composite gates are defined as macros that expand to primitives at append time:
 
@@ -73,8 +95,8 @@ counts = get_backend("stabilizer").run(ghz, shots=1000).result().counts
 
 Submitting a non-Clifford gate to the stabilizer backend (or an unsupported gate to any backend) raises `UnsupportedGateError` before anything runs.
 
-For noisy H gates, Stim-style channels, and logical surface-code operations,
-see **[Stabilizer & QEC](/sdk/stabilizer-qec)**.
+For circuit-level QEC experiments — encoded circuits, noise injection, and
+decoding — see **[Quantum Error Correction](/sdk/stabilizer-qec)**.
 
 ## Running on IQM hardware
 
