@@ -4,7 +4,7 @@ The `lightrider` package provides quantum circuit simulation, stabilizer and
 surface-code experiments, IQM cloud jobs, quantum random numbers, attested
 entropy, and QRNG-driven synthetic data.
 
-> **Current documentation:** SDK 1.3.0
+> **Current documentation:** SDK 1.4.1
 
 ## Installation
 
@@ -15,7 +15,7 @@ pip install "lightrider[pandas]"   # + pandas DataFrame support
 
 Requires Python ≥ 3.9.
 
-> **Live EMS entropy** additionally needs the `lr-entropy` SDK, which ships with the Light Rider platform rather than on PyPI. Install it from the platform repository (`pip install ./sdk-python`) and `EntropySource` becomes available automatically.
+Live EMS entropy is included in the official `lightrider` package. Connect `EntropyClient` or `EntropySource` to `https://ems.lightriderinc.com` with a Light Rider API key.
 
 ## Quickstart
 
@@ -38,7 +38,7 @@ print(job.result().counts)   # {'00': 507, '11': 493}
 ## Four core capabilities
 
 - **[Quantum Circuits](/sdk/quantum-circuits)** — build and run quantum circuits with local simulators or IQM cloud hardware.
-- **[Stabilizer & QEC](/sdk/stabilizer-qec)** — simulate Pauli noise, the nine-qubit surface code, and fault-tolerant logical Hadamard.
+- **[Quantum Error Correction](/sdk/stabilizer-qec)** — run circuit-level QEC experiments on surface, repetition, five-qubit, and color codes, with PyMatching decoding.
 - **[Quantum Random Numbers](/sdk/quantum-random-numbers)** — draw numpy-compatible randomness from real quantum entropy sources.
 - **[Synthetic Data with Provenance](/sdk/synthetic-data)** — generate tabular synthetic data where every random draw is quantum and attributable.
 

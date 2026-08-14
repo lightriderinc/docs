@@ -1,58 +1,39 @@
----
-title: Receipts & verification
----
+# Receipts and verification
 
-# Receipts & verification
+Every entropy response includes a signed receipt. It binds the request to its policy, sources, quality checks, extractor, output size, and timestamp.
 
-Every response is signed — Ed25519 or post-quantum ML-DSA-65. Verify attestations independently.
+## Important fields
 
-## What a receipt attests
+- Identity: `request_id`, `application_id`, `audit_event_id`.
+- Routing: `policy`, `pool_id`, `contributing_sources`.
+- Quality: `quality_score`, `rct_pass`, `apt_pass`.
+- Processing: `extractor_alg`, `drbg_alg`, `input_min_entropy_bits`.
+- Output: `output_bytes`, `timestamp_unix_ns`.
+- Signature: `signature_alg`, `signature`.
+- Retention: `raw_entropy_stored` is always `false`.
 
-A receipt is a signed statement binding the delivered bytes' metadata: which sources contributed, which pool and extractor produced the output, the real-time quality score and health-test outcomes at generation time, and a nanosecond timestamp. The signature is computed over the canonicalized receipt (sorted keys, signature field removed, compact JSON), so any tampering invalidates it.
+## Verify with Python
 
-## Receipt fields
+```python
+from lightrider import EntropyClient, Policy
 
-| Field | Meaning |
-| --- | --- |
-| request\_id | Unique id, also usable to re-fetch the receipt later. |
-| policy / pool\_id | Requested policy and the tier pool that served it. |
-| contributing\_sources | Every source that fed the output. |
-| quality\_score | Real-time score from the streaming quality stage. |
-| rct\_pass / apt\_pass | Repetition-count and adaptive-proportion health tests. |
-| extractor\_alg / drbg\_alg | Conditioning extractor and output DRBG. |
-| input\_min\_entropy\_bits | Assessed min-entropy of the raw input. |
-| output\_bytes | Number of bytes delivered. |
-| timestamp\_unix\_ns | Generation time (Unix nanoseconds). |
-| raw\_entropy\_stored | Always false — raw entropy is never retained. |
-| signature\_alg / signature | Ed25519 or ML-DSA-65 signature over the canonical form. |
+with EntropyClient("https://ems.lightriderinc.com", api_key="lr_...") as client:
+    client.fetch_verifier()
+    response = client.get_bytes(32, policy=Policy.HIGHEST_QUALITY)
 
-## Signature keys
-
-`GET /v1/pubkey` returns the active algorithm and public key. Production deployments sign with ML-DSA-65 (FIPS 204 post-quantum); Ed25519 is used in development. SDKs pin this key once (`fetch_verifier()` in Python, `verifierPublicKey` in JavaScript) and then verify every response.
-
-## Verifying
-::: code-group
-
-```python [Python]
-cli = EntropyClient("http://localhost:8080")
-cli.fetch_verifier()                     # pin key; every call now auto-verifies
-
-r = cli.get_bytes(32, policy=Policy.HIGHEST_QUALITY)
-# r.bytes_ is only returned after the signature check passes.
+print(response.receipt.signature_alg)
 ```
 
-``` javascript [JavaScript]
-import { verifyReceipt, canonicalReceiptBytes } from '@lightrider/entropy';
+After `fetch_verifier()`, the SDK raises `SdkError` instead of returning bytes when verification fails.
 
-const ok = await verifyReceipt(receipt, pinnedPublicKey);
-if (!ok) throw new Error('receipt signature invalid');
+For stronger trust, provision the expected production public key out of band instead of trusting the first key fetched from `/v1/pubkey`.
+
+## Audit a receipt
+
+Retrieve a stored receipt with:
+
+```text
+GET https://ems.lightriderinc.com/v1/receipts/:request_id
 ```
-:::
 
-::: tip Note
-The dashboard's [Receipts](http://93.127.215.63:8080/receipts) page performs the same verification in-browser: paste or select a receipt and it checks the signature against the pinned key.
-:::
-
-## Re-fetching & audit
-
-Receipts are retrievable after the fact by request id via `GET /v1/receipts/:request_id`, so an auditor can confirm that a stored receipt matches what the platform issued. Each receipt also carries an `audit_event_id` linking it to the append-only audit trail.
+You can also inspect receipts from the [EMS receipts page](https://ems.lightriderinc.com/receipts).

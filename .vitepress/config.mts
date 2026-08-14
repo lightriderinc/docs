@@ -65,7 +65,7 @@ export default defineConfig({
             { text: "Getting Started", link: "/sdk/getting-started" },
 
             { text: "Quantum Circuits", link: "/sdk/quantum-circuits" },
-            { text: "Stabilizer & QEC", link: "/sdk/stabilizer-qec" },
+            { text: "Quantum Error Correction", link: "/sdk/stabilizer-qec" },
             {
               text: "Quantum Random Numbers",
               link: "/sdk/quantum-random-numbers",
