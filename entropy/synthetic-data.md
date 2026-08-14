@@ -1,36 +1,30 @@
----
-title: Synthetic data
----
-
 # Synthetic data
 
-Generate synthetic datasets whose every random draw is quantum, with a signed provenance certificate.
+The official `lightrider` SDK can generate synthetic tabular data from quantum randomness and record its provenance.
 
-## Overview
+## Install
 
-The `lightrider` synthesizer fits a Gaussian copula to your dataset and generates new rows in which every random draw comes from quantum entropy — no pseudo-random fallback. Explore it interactively on the [Synthetic data](http://93.127.215.63:8080/synthetic) page.
+```bash
+pip install "lightrider[pandas]"
+```
 
-## Offline vs. live entropy
-
--   Offline — draws from a bundled IQM QPU bit pool; runs with no network access.
--   Live — draws attested multi-source entropy from the EMS at generation time, so the provenance certificate references verifiable receipts.
-
-## Example
+## Use cloud EMS entropy
 
 ```python
-from lightrider import Synthesizer, EntropySource
+from lightrider import EntropySource, Synthesizer
 
-# Offline: bundled IQM quantum bit pool
-synth = Synthesizer(dataset_id="customers_v3").fit(df)
-rows  = synth.generate(10_000)          # QRNG-driven synthetic rows
+source = EntropySource(
+    "https://ems.lightriderinc.com",
+    api_key="lr_...",
+    dataset_id="customers_v3",
+    allow_failover=False,
+)
 
-# Live: signed multi-source entropy from the EMS
-src   = EntropySource(dataset_id="customers_v3")
-synth = Synthesizer(entropy=src).fit(df)
-synth.generate(10_000)
+synth = Synthesizer(entropy=source).fit(df)
+rows = synth.generate(10_000)
 synth.manifest.write("customers_v3.provenance.json")
 ```
 
-## Provenance certificates
+Set `allow_failover=False` when every draw must be attested. The default allows the operating system CSPRNG to keep a long job running and marks those draws as failover in the manifest.
 
-Every generated dataset ships with a signed manifest recording the dataset id, entropy origin (bundled pool or live EMS receipts), and generation parameters — so downstream consumers can audit where the randomness came from, not just that the data looks plausible.
+Try it in the [EMS synthetic data app](https://ems.lightriderinc.com/synthetic).

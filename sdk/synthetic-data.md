@@ -36,9 +36,9 @@ The copula reproduces each column's marginal distribution and inter-column corre
 | **live-attested** | `EntropySource` against a Light Rider EMS | Multi-source extraction over GF(2¹²⁸), SP 800-90B health-tested, post-quantum-signed receipts |
 
 ```python
-from lightrider import EntropySource, Synthesizer   # requires the lr-entropy SDK
+from lightrider import EntropySource, Synthesizer
 
-src   = EntropySource("http://localhost:7081", dataset_id="customers_v3")
+src   = EntropySource("https://ems.lightriderinc.com", dataset_id="customers_v3")
 synth = Synthesizer(entropy=src).fit(df)
 rows  = synth.generate(10_000)     # every draw carries a signed receipt
 ```

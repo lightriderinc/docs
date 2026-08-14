@@ -4,7 +4,7 @@ The `lightrider` package provides quantum circuit simulation, stabilizer and
 surface-code experiments, IQM cloud jobs, quantum random numbers, attested
 entropy, and QRNG-driven synthetic data.
 
-> **Current documentation:** SDK 1.3.0
+> **Current documentation:** SDK 1.4.1
 
 ## Installation
 
@@ -15,7 +15,7 @@ pip install "lightrider[pandas]"   # + pandas DataFrame support
 
 Requires Python ≥ 3.9.
 
-> **Live EMS entropy** additionally needs the `lr-entropy` SDK, which ships with the Light Rider platform rather than on PyPI. Install it from the platform repository (`pip install ./sdk-python`) and `EntropySource` becomes available automatically.
+Live EMS entropy is included in the official `lightrider` package. Connect `EntropyClient` or `EntropySource` to `https://ems.lightriderinc.com` with a Light Rider API key.
 
 ## Quickstart
 
