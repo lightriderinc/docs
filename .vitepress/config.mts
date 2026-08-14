@@ -45,9 +45,14 @@ export default defineConfig({
 
     nav: [
       { text: "SDK", link: "sdk/getting-started" },
-      { text: "Platform", link: "platform/introduction" },
+      { text: "Cloud platform", link: "platform/introduction" },
+      { text: "PQC", link: "pqc/policy" },
+
       { text: "EMS", link: "entropy/introduction" },
-      { text: "Launch Platform", link: "https://platform.lightriderinc.com/" },
+      {
+        text: "Launch Cloud platform",
+        link: "https://platform.lightriderinc.com/",
+      },
       { text: "Light Rider Website", link: "https://www.lightriderinc.com/" },
     ],
 
@@ -151,6 +156,31 @@ export default defineConfig({
           text: "Account",
           collapsed: true,
           items: [{ text: "API keys", link: "/platform/api-keys" }],
+        },
+      ],
+      "/pqc/": [
+        {
+          text: "Policy",
+          collapsed: true,
+          items: [{ text: "U.S. Quantum Policy", link: "/pqc/policy" }],
+        },
+        {
+          text: "Get started",
+          collapsed: true,
+          items: [
+            { text: "What is Light Rider PQC?", link: "/pqc/introduction" },
+            { text: "Quickstart", link: "/pqc/quickstart" },
+          ],
+        },
+        {
+          text: "Discover & inventory",
+          collapsed: true,
+          items: [{ text: "Cryptographic discovery", link: "/pqc/discovery" }],
+        },
+        {
+          text: "Reference",
+          collapsed: true,
+          items: [{ text: "SDK & CLI reference", link: "/pqc/sdk-reference" }],
         },
       ],
     },

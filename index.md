@@ -8,11 +8,11 @@ hero:
   tagline: Documentation for Light Rider's products and services
   actions:
     - theme: brand
-      text: Get started with SDK
-      link: /sdk/getting-started
-    - theme: alt
-      text: Get started with the Platform
+      text: Get started with Cloud platform
       link: /platform/getting-started
+    - theme: alt
+      text: Get started with PQC
+      link: /pqc/policy
 
 
 features:
@@ -24,9 +24,14 @@ features:
     details: Unified access to quantum hardware backends and Light Rider's services in a single environment.
     link: platform/introduction
     linkText: Learn more
+  - title: Post Quantum Cryptography
+    details: Discover quantum-vulnerable cryptography, generate a CBOM, and use FIPS-validated ML-KEM and ML-DSA — plus U.S. policy guidance for the quantum-safe transition.
+    link: pqc/policy
+    linkText: Learn more
   - title: Entropy Management System
     details: Quantum-derived entropy for secure communications, cryptographic workflows, AI training data, and randomness-dependent applications.
     link: entropy/introduction
     linkText: Learn more
+
 
 ---
