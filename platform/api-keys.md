@@ -4,7 +4,7 @@ title: API Keys
 
 # API Keys
 
-An API key authenticates requests made to the Light Rider platform API from outside the dashboard — scripts, notebooks, or the [SDK](/sdk/getting-started) — separately from your browser sign-in session.
+An API key authenticates requests made to the Light Rider platform API from outside the dashboard — scripts, notebooks, or the [SDK](/platform/sdk/getting-started) — separately from your browser sign-in session.
 
 ## Generating a key
 
@@ -31,10 +31,10 @@ See [Jobs & results](/platform/jobs#submitting-jobs-programmatically) for a full
 An API key acts on your behalf for programmatic actions — currently, submitting quantum jobs and reading their status/results. It does not grant access to account or billing settings; those require signing in normally.
 
 ::: tip Simulators don't need a key
-An API key is only required to submit jobs to real quantum processors via the platform API. Simulators run locally through the [SDK](/sdk/getting-started) without one.
+An API key is only required to submit jobs to real quantum processors via the platform API. Simulators run locally through the [SDK](/platform/sdk/getting-started) without one.
 :::
 
 ## Next steps
 
 - [Jobs & results](/platform/jobs) — submit and track jobs using your key.
-- [Light Rider SDK](/sdk/getting-started) — a higher-level Python client instead of raw HTTP calls.
+- [Light Rider SDK](/platform/sdk/getting-started) — a higher-level Python client instead of raw HTTP calls.

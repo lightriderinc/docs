@@ -37,9 +37,9 @@ print(job.result().counts)   # {'00': 507, '11': 493}
 
 ## Four core capabilities
 
-- **[Quantum Circuits](/sdk/quantum-circuits)** — build and run quantum circuits with local simulators or IQM cloud hardware.
-- **[Quantum Error Correction](/sdk/stabilizer-qec)** — run circuit-level QEC experiments on surface, repetition, five-qubit, and color codes, with PyMatching decoding.
-- **[Quantum Random Numbers](/sdk/quantum-random-numbers)** — draw numpy-compatible randomness from real quantum entropy sources.
-- **[Synthetic Data with Provenance](/sdk/synthetic-data)** — generate tabular synthetic data where every random draw is quantum and attributable.
+- **[Quantum Circuits](/platform/sdk/quantum-circuits)** — build and run quantum circuits with local simulators or IQM cloud hardware.
+- **[Quantum Error Correction](/platform/sdk/stabilizer-qec)** — run circuit-level QEC experiments on surface, repetition, five-qubit, and color codes, with PyMatching decoding.
+- **[Quantum Random Numbers](/platform/sdk/quantum-random-numbers)** — draw numpy-compatible randomness from real quantum entropy sources.
+- **[Synthetic Data with Provenance](/platform/sdk/synthetic-data)** — generate tabular synthetic data where every random draw is quantum and attributable.
 
 Prefer a web UI over writing code? The **[Light Rider Cloud platform](/platform/introduction)** covers the same circuit submission through a dashboard, with self-serve API keys for scripting against it directly.

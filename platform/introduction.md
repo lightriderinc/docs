@@ -8,7 +8,7 @@ Light Rider Cloud is the web platform for running quantum workloads: submit circ
 
 ## Overview
 
-The platform sits in front of Light Rider's quantum backends and services. You can use it entirely from the dashboard, or authenticate programmatically with an API key and drive the same actions from a script or the [Light Rider SDK](/sdk/getting-started).
+The platform sits in front of Light Rider's quantum backends and services. You can use it entirely from the dashboard, or authenticate programmatically with an API key and drive the same actions from a script or the [Light Rider SDK](/platform/sdk/getting-started).
 
 ## What you can do
 

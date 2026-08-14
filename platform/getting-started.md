@@ -26,7 +26,7 @@ Simulator jobs are free and unlimited. To run a circuit on real quantum hardware
 
 ## Step 4: Generate an API key (optional, for programmatic access)
 
-If you want to submit jobs from a script instead of the dashboard, generate a key under **Settings → API Keys** and use it as a bearer token. See [API keys](/platform/api-keys) for the full request format, or use the [Light Rider SDK](/sdk/getting-started) directly.
+If you want to submit jobs from a script instead of the dashboard, generate a key under **Settings → API Keys** and use it as a bearer token. See [API keys](/platform/api-keys) for the full request format, or use the [Light Rider SDK](/platform/sdk/getting-started) directly.
 
 ## Next steps
 

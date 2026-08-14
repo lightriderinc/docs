@@ -67,7 +67,7 @@ Every backend declares the gate set it supports, and `run()` validates the circu
 | Backend name | Aliases | Where | Gate set | Best for |
 |---|---|---|---|---|
 | `lightrider_statevector` | `statevector`, `sv` | local | full | Exact simulation up to 24 qubits. Shots are sampled in one vectorized pass |
-| `lightrider_stabilizer` | `stabilizer`, `stim` | local | Clifford gates plus Pauli noise, basis measurement, and reset | Large Clifford circuits and [surface-code QEC](/sdk/stabilizer-qec) |
+| `lightrider_stabilizer` | `stabilizer`, `stim` | local | Clifford gates plus Pauli noise, basis measurement, and reset | Large Clifford circuits and [surface-code QEC](/platform/sdk/stabilizer-qec) |
 | `iqm` | `cloud` | cloud | full, transpiled server-side to IQM-native `r` (prx) + `cz` | Real-hardware runs via the Light Rider IQM proxy |
 
 ## Running locally
@@ -96,7 +96,7 @@ counts = get_backend("stabilizer").run(ghz, shots=1000).result().counts
 Submitting a non-Clifford gate to the stabilizer backend (or an unsupported gate to any backend) raises `UnsupportedGateError` before anything runs.
 
 For circuit-level QEC experiments — encoded circuits, noise injection, and
-decoding — see **[Quantum Error Correction](/sdk/stabilizer-qec)**.
+decoding — see **[Quantum Error Correction](/platform/sdk/stabilizer-qec)**.
 
 ## Running on IQM hardware
 

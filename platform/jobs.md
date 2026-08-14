@@ -102,7 +102,7 @@ curl https://platform.lightriderinc.com/api/lr/quantum/jobs/<job_uuid>/result \
   -H "Authorization: Bearer <your-api-key>"
 ```
 
-Prefer working in Python? The [Light Rider SDK](/sdk/getting-started) wraps this same submission flow with a `Circuit`/`get_backend()` interface — see [Quantum Circuits](/sdk/quantum-circuits).
+Prefer working in Python? The [Light Rider SDK](/platform/sdk/getting-started) wraps this same submission flow with a `Circuit`/`get_backend()` interface — see [Quantum Circuits](/platform/sdk/quantum-circuits).
 
 ## Next steps
 

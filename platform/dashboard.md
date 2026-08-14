@@ -23,7 +23,7 @@ Two quick-start tiles let you try the platform without leaving the dashboard:
 
 ## Before you sign in
 
-If you aren't signed in, the dashboard shows a welcome view instead, with links to browse [Backends](/platform/backends) and the [SDK documentation](/sdk/getting-started), plus a **Create an account** button.
+If you aren't signed in, the dashboard shows a welcome view instead, with links to browse [Backends](/platform/backends) and the [SDK documentation](/platform/sdk/getting-started), plus a **Create an account** button.
 
 ## Next steps
 

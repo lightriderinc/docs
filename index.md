@@ -16,16 +16,12 @@ hero:
 
 
 features:
-  - title: Light Rider SDK
-    details: Quantum circuits, stabilizer and surface-code QEC, IQM cloud submission, quantum random numbers, and QRNG synthetic data.
-    link: sdk/getting-started
-    linkText: Learn more
   - title: Light Rider Cloud platform
     details: Unified access to quantum hardware backends and Light Rider's services in a single environment.
     link: platform/introduction
     linkText: Learn more
   - title: Post Quantum Cryptography
-    details: Discover quantum-vulnerable cryptography, generate a CBOM, and use FIPS-validated ML-KEM and ML-DSA — plus U.S. policy guidance for the quantum-safe transition.
+    details: Discover quantum-vulnerable cryptography, generate a CBOM, and use FIPS-validated ML-KEM and ML-DSA.
     link: pqc/policy
     linkText: Learn more
   - title: Entropy Management System

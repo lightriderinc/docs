@@ -44,7 +44,6 @@ export default defineConfig({
     siteTitle: false,
 
     nav: [
-      { text: "SDK", link: "sdk/getting-started" },
       { text: "Cloud platform", link: "platform/introduction" },
       { text: "PQC", link: "pqc/policy" },
 
@@ -57,23 +56,6 @@ export default defineConfig({
     ],
 
     sidebar: {
-      "/sdk/": [
-        {
-          text: "Light Rider SDK",
-          collapsed: true,
-          items: [
-            { text: "Getting Started", link: "/sdk/getting-started" },
-
-            { text: "Quantum Circuits", link: "/sdk/quantum-circuits" },
-            { text: "Quantum Error Correction", link: "/sdk/stabilizer-qec" },
-            {
-              text: "Quantum Random Numbers",
-              link: "/sdk/quantum-random-numbers",
-            },
-            { text: "Synthetic Data", link: "/sdk/synthetic-data" },
-          ],
-        },
-      ],
       "/entropy/": [
         {
           text: "Entropy Management System",
@@ -156,6 +138,26 @@ export default defineConfig({
           text: "Account",
           collapsed: true,
           items: [{ text: "API keys", link: "/platform/api-keys" }],
+        },
+        {
+          text: "Light Rider SDK",
+          collapsed: true,
+          items: [
+            { text: "Getting Started", link: "/platform/sdk/getting-started" },
+            {
+              text: "Quantum Circuits",
+              link: "/platform/sdk/quantum-circuits",
+            },
+            {
+              text: "Quantum Error Correction",
+              link: "/platform/sdk/stabilizer-qec",
+            },
+            {
+              text: "Quantum Random Numbers",
+              link: "/platform/sdk/quantum-random-numbers",
+            },
+            { text: "Synthetic Data", link: "/platform/sdk/synthetic-data" },
+          ],
         },
       ],
       "/pqc/": [
