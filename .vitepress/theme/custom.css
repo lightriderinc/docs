@@ -109,6 +109,16 @@ h1 {
   border-left: 5px solid #ff1232 !important;
 }
 
+/* light/dark image swapping */
+
+.dark .light-only {
+  display: none !important;
+}
+
+html:not(.dark) .dark-only {
+  display: none !important;
+}
+
 /* 404 page */
 
 .NotFound .code {

@@ -6,6 +6,9 @@ title: SDK & CLI reference
 
 The full Python SDK and command-line surface for the Veloce agent. All cryptographic operations execute inside the local agent; the Python package holds no cryptographic code and private keys never leave the agent as anything but opaque handles.
 
+<img src="/pqc-grid-vis-light.svg" class="light-only" alt="PQC grid visualization">
+<img src="/pqc-grid-vis-dark.svg" class="dark-only" alt="PQC grid visualization">
+
 ## Python SDK
 
 ```python
