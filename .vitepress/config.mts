@@ -9,6 +9,40 @@ export default defineConfig({
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }],
 
+    ["meta", { property: "og:type", content: "website" }],
+    ["meta", { property: "og:title", content: "Light Rider Docs" }],
+    [
+      "meta",
+      {
+        property: "og:description",
+        content: "Documentation for Light Rider's products and services.",
+      },
+    ],
+    [
+      "meta",
+      {
+        property: "og:image",
+        content: "https://docs.lightriderinc.com/LR-docs-open-graph.png",
+      },
+    ],
+    ["meta", { property: "og:url", content: "https://docs.lightriderinc.com/" }],
+    ["meta", { name: "twitter:card", content: "summary_large_image" }],
+    ["meta", { name: "twitter:title", content: "Light Rider Docs" }],
+    [
+      "meta",
+      {
+        name: "twitter:description",
+        content: "Documentation for Light Rider's products and services.",
+      },
+    ],
+    [
+      "meta",
+      {
+        name: "twitter:image",
+        content: "https://docs.lightriderinc.com/LR-docs-open-graph.png",
+      },
+    ],
+
     [
       "link",
       {
