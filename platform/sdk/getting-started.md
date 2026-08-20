@@ -4,7 +4,7 @@ The `lightrider` package provides quantum circuit simulation, stabilizer and
 surface-code experiments, IQM cloud jobs, quantum random numbers, attested
 entropy, and QRNG-driven synthetic data.
 
-> **Current documentation:** SDK 1.4.1
+> **Current documentation:** SDK 1.4.2
 
 ## Installation
 

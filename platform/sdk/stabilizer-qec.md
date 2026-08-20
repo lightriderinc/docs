@@ -1,7 +1,5 @@
 # Quantum Error Correction with `lightrider`
 
-Available in Light Rider SDK 1.4.1.
-
 An introduction to running circuit-level QEC experiments with the `lightrider` SDK: building encoded circuits for several stabilizer codes, injecting noise, simulating on the local stabilizer backend, and decoding with PyMatching to measure logical fidelity before and after correction.
 
 ## Installation
