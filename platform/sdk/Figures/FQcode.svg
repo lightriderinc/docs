@@ -26,4 +26,4 @@
 <circle cx="217.3" cy="367.4" r="21" fill="#eceafc" stroke="#a09ade" stroke-width="1.4"/><text x="217.3" y="367.4" text-anchor="middle" dominant-baseline="central" font-size="13" fill="#5f58b0">a2</text>
 <circle cx="256.5" cy="246.6" r="21" fill="#eceafc" stroke="#a09ade" stroke-width="1.4"/><text x="256.5" y="246.6" text-anchor="middle" dominant-baseline="central" font-size="13" fill="#5f58b0">a3</text>
 <text x="320.0" y="618.0" text-anchor="middle" font-size="14" fill="#8a877e">stabilizers: XZZXI and its cyclic shifts  —  solid edge = X, dashed edge = Z</text>
-</svg>
+<circle cx="320.0" cy="334.0" r="275.0" fill="none" stroke="#c1121f" stroke-width="3.5" stroke-dasharray="9 6"/><g font-size="14" fill="#4a4a4a"><circle cx="70" cy="40" r="10" fill="none" stroke="#c1121f" stroke-width="3" stroke-dasharray="7 5"/><text x="88" y="40" dominant-baseline="central">logical X&#772;/Y&#772;/Z&#772; support (all 5 qubits)</text></g></svg>

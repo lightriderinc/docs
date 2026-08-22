@@ -70,6 +70,8 @@ QEC Fidelity: 0.998800 (err 1.20e-03)
 
 ### Rotated surface code
 
+*Advantages:* the field's workhorse — only weight-4 (bulk) and weight-2 (boundary) checks on a square lattice, the highest known error threshold among practical codes, and a mature MWPM decoder that runs in near-linear time.
+
 ```python
 from lightrider import RotatedSurface_Code
 
@@ -77,11 +79,15 @@ RScode = RotatedSurface_Code(distance=3, rounds=1)
 res = RScode.logical_fidelity(shots, 'Z', p=p)    # basis: 'Z' or 'X'
 ```
 
-The `[[d^2, 1, d]]` rotated surface code. Decoded with MWPM on the multi-round matching graph; a virtual final round is reconstructed from the data-qubit readout (the standard boundary trick for memory experiments).
+**`[[d^2, 1, d]]`:** logical Z is the bottom row (`d` qubits) and logical X is the left column (`d` qubits) — marked in the figure below by the blue and green dashed loops, overlapping at qubit 0; the small green/purple dots between data qubits are the weight-4 (bulk) and weight-2 (boundary) X- and Z-stabilizers, with each one's light green/purple fill showing exactly which qubits it checks (a square in the bulk, a triangle poking outward at the boundary).
+
+Decoded with MWPM on the multi-round matching graph; a virtual final round is reconstructed from the data-qubit readout (the standard boundary trick for memory experiments).
 
 <img src="./Figures/RScode_d3d5.svg" alt="Rotated surface code qubit layout, d=3 and d=5">
 
 ### Repetition code
+
+*Advantages:* minimal — only nearest-neighbor weight-2 checks and 1D connectivity, making it the cheapest possible sanity check for a new device or noise model before moving to a real 2D code.
 
 ```python
 from lightrider import Repetition_Code
@@ -90,11 +96,15 @@ Repcode = Repetition_Code(n=3, rounds=1)
 res = Repcode.logical_fidelity(shots, p=p)
 ```
 
+**`[[n, 1, n]]`:** the logical qubit is a single data qubit (index 0, circled in the figure) — under the `ZZ` stabilizer group (the purple `z` dots between neighbors) every physical `Z_i` is equivalent to logical Z-bar, so any one qubit's readout already carries the encoded value when no errors occur.
+
 Bit-flip repetition code — the simplest matchable code, useful as a sanity check.
 
 <img src="./Figures/Repcode.svg" alt="Repetition code qubit layout, d=3 and d=5">
 
 ### Five-qubit code
+
+*Advantages:* the smallest possible code protecting against an arbitrary single-qubit error — useful whenever qubit count is the bottleneck and full 2D-lattice overhead isn't affordable.
 
 ```python
 from lightrider import FiveQubit_Code
@@ -103,11 +113,15 @@ FQcode = FiveQubit_Code(rounds=1)
 res = FQcode.logical_fidelity(shots, expected=0)
 ```
 
+**`[[5, 1, 3]]`:** logical X, Y, and Z each act on all 5 data qubits, circled together by the single red loop in the figure; the 4 ancillas (`a0`-`a3`) each realize a weight-4 stabilizer mixing X, Y, and Z across different qubits (solid edge = X, dashed edge = Z, per the caption).
+
 The perfect `[[5,1,3]]` code. Its errors flip more than two stabilizers, so it is not decodable by plain matching — decoding is handled internally (no `p`/`matching` argument).
 
 <img src="./Figures/FQcode.svg" alt="Five-qubit code stabilizer layout">
 
 ### 6-6-6 color code
+
+*Advantages:* transversal implementation of the full Clifford group (H, S, and CNOT all bias-free), unlike the surface code, which needs lattice surgery or magic-state tricks for non-Clifford/S gates — valuable when logical gate overhead matters more than physical qubit count.
 
 ```python
 from lightrider import Color_Code
@@ -115,6 +129,8 @@ from lightrider import Color_Code
 Colcode = Color_Code(distance=3, rounds=1)
 res = Colcode.logical_fidelity(shots, p=p)
 ```
+
+**`[[(3d^2+1)/4, 1, d]]`:** logical X and Z (self-dual, so they share support; logical Y is their product) sit on the boundary row of `d` qubits circled by the red dashed loop. Each face is one stabilizer, shown as a light red/green/blue tile per the 3-coloring, with its `x`/`z` ancilla dots marking the X- and Z-type check sharing that face's qubit support.
 
 Triangular 6-6-6 color code, decoded with a restriction decoder: three color-restricted matching subgraphs whose corrections are combined. Note the round-count constraint — fidelity readout needs a deterministic logical-Z observable, which occurs when `rounds % 3 == 2` (rounds = 2, 5, 8, ...; at least one Z-type syndrome round is also needed, so rounds >= 5 in practice).
 
@@ -179,6 +195,3 @@ Detectors are XORs of consecutive syndrome rounds (plus the virtual final round 
 - At low `p` the error rates are small — 20k shots gives only a handful of error events. Use 1e5–1e6 shots (or a larger `p`) for statistically meaningful before/after comparisons.
 - Expect `error_after` well below `error_before` for matchable codes at low `p`; if they're equal, check that `shots`, the matching, and the code instance all come from the same `distance`/`rounds` configuration.
 - All simulation here runs locally on the `'stabilizer'` backend (Clifford-only, scales to hundreds of qubits). The same circuits can be submitted to IQM hardware via `get_backend('iqm', ...)`.
-
-
-
