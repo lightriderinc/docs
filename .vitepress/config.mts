@@ -159,8 +159,22 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: "Dashboard", link: "/platform/dashboard" },
-            { text: "Backends", link: "/platform/backends" },
             { text: "Jobs & results", link: "/platform/jobs" },
+          ],
+        },
+        {
+          text: "Backends",
+          collapsed: true,
+          items: [
+            { text: "Catalog", link: "/platform/backends/catalog" },
+            {
+              text: "Chiplets as Logical Qubits",
+              link: "/platform/backends/cepheus-logical-qubits",
+            },
+            {
+              text: "QEC Module Design & Selection",
+              link: "/platform/backends/cepheus-qec-modules",
+            },
           ],
         },
         {

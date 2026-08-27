@@ -106,5 +106,5 @@ Prefer working in Python? The [Light Rider SDK](/platform/sdk/getting-started) w
 
 ## Next steps
 
-- [Backends](/platform/backends) — full catalog of devices you can submit to.
+- [Backends](/platform/backends/catalog) — full catalog of devices you can submit to.
 - [API keys](/platform/api-keys) — generate, rotate, and revoke the key used above.

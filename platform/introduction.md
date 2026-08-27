@@ -33,7 +33,7 @@ The platform sits in front of Light Rider's quantum backends and services. You c
 
 ## Backends available today
 
-The catalog lists quantum processors from **IQM**, **Rigetti**, and **IBM Quantum**, alongside free simulators. IQM's Garnet, Emerald, and Sirius devices (and their `:mock` simulator counterparts) are wired up for job submission from both the dashboard and the API today; Rigetti and IBM devices are browsable in the catalog ahead of full submission support. See [Backends](/platform/backends) for details.
+The catalog lists quantum processors from **IQM**, **Rigetti**, and **IBM Quantum**, alongside free simulators. IQM's Garnet, Emerald, and Sirius devices (and their `:mock` simulator counterparts) are wired up for job submission from both the dashboard and the API today; Rigetti and IBM devices are browsable in the catalog ahead of full submission support. See [Backends](/platform/backends/catalog) for details.
 
 ## Credits model
 

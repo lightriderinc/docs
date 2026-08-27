@@ -23,10 +23,10 @@ Two quick-start tiles let you try the platform without leaving the dashboard:
 
 ## Before you sign in
 
-If you aren't signed in, the dashboard shows a welcome view instead, with links to browse [Backends](/platform/backends) and the [SDK documentation](/platform/sdk/getting-started), plus a **Create an account** button.
+If you aren't signed in, the dashboard shows a welcome view instead, with links to browse [Backends](/platform/backends/catalog) and the [SDK documentation](/platform/sdk/getting-started), plus a **Create an account** button.
 
 ## Next steps
 
 - [Jobs & results](/platform/jobs) — the full history behind "Latest jobs."
-- [Backends](/platform/backends) — every processor and simulator you can submit to.
+- [Backends](/platform/backends/catalog) — every processor and simulator you can submit to.
 - [Applications](/platform/applications) — more quantum-powered demos beyond the dashboard tiles.
