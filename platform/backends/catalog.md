@@ -18,7 +18,7 @@ Backends come from three providers:
 | Provider | Notes |
 | --- | --- |
 | **IQM** | Garnet, Emerald, and Sirius processors, each with a free `:mock` simulator counterpart. All six are wired up for job submission today. |
-| **Rigetti** | Cepheus-1-108Q processor, with a free :mock simulator counterpart. Wired up for job submission today. See [Chiplets as Logical Qubits](/platform/backends/cepheus-logical-qubits) for Light Rider's QEC architecture on Rigetti's `Cepheus-1-108Q`. |
+| **Rigetti** | [Cepheus-1-108Q](/platform/backends/rigetti-cepheus-1-108q) processor, with a free :mock simulator counterpart. Wired up for job submission today, gated to reserved time slots. |
 | **IBM Quantum** | Listed in the catalog with live calibration data; job submission isn't available yet. |
 
 ## Submitting a job from a backend card
@@ -44,4 +44,5 @@ Once a job completes, its measurement results appear in the same view — see [J
 
 - [Jobs & results](/platform/jobs) — track every submission and read measurement counts.
 - [API keys](/platform/api-keys) — authenticate requests made outside the dashboard.
+- [Rigetti Cepheus-1-108Q](/platform/backends/rigetti-cepheus-1-108q) — a tour of the backend's own page: topology and calibration data, experiments, connection, and reservations.
 - [Chiplets as Logical Qubits](/platform/backends/cepheus-logical-qubits) — Light Rider's QEC architecture for turning Cepheus chiplets into logical qubits.

@@ -16,7 +16,7 @@ hero:
 
 
 features:
-  - title: Light Rider Cloud platform
+  - title: Light Rider Quantum platform
     details: Unified access to quantum hardware backends and Light Rider's services in a single environment.
     link: platform/introduction
     linkText: Learn more
@@ -24,10 +24,10 @@ features:
     details: Discover quantum-vulnerable cryptography, generate a CBOM, and use FIPS-validated ML-KEM and ML-DSA.
     link: pqc/policy
     linkText: Learn more
-  - title: Entropy Management System (EMS)
+  - title: Light Rider Entropy platform
     details: Quantum-derived entropy for secure communications, cryptographic workflows, AI training data, and randomness-dependent applications.
-    link: entropy/introduction
-    linkText: Learn more
+    # link: entropy/introduction
+    linkText: Coming soon
 
 
 ---

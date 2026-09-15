@@ -42,4 +42,4 @@ print(job.result().counts)   # {'00': 507, '11': 493}
 - **[Quantum Random Numbers](/platform/sdk/quantum-random-numbers)** — draw numpy-compatible randomness from real quantum entropy sources.
 - **[Synthetic Data with Provenance](/platform/sdk/synthetic-data)** — generate tabular synthetic data where every random draw is quantum and attributable.
 
-Prefer a web UI over writing code? The **[Light Rider Cloud platform](/platform/introduction)** covers the same circuit submission through a dashboard, with self-serve API keys for scripting against it directly.
+Prefer a web UI over writing code? The **[Light Rider Quantum platform](/platform/introduction)** covers the same circuit submission through a dashboard, with self-serve API keys for scripting against it directly.

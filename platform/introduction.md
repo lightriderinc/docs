@@ -1,10 +1,10 @@
 ---
-title: What is Light Rider Cloud?
+title: What is Light Rider Quantum?
 ---
 
-# What is Light Rider Cloud?
+# What is Light Rider Quantum?
 
-Light Rider Cloud is the web platform for running quantum workloads: submit circuits to quantum processors and simulators, track jobs and results, and manage compute credits — all from one account at [platform.lightriderinc.com](https://platform.lightriderinc.com/).
+Light Rider Quantum is the web platform for running quantum workloads: submit circuits to quantum processors and simulators, track jobs and results, and manage compute credits — all from one account at [platform.lightriderinc.com](https://platform.lightriderinc.com/).
 
 ## Overview
 

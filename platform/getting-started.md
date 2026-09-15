@@ -8,7 +8,7 @@ Create an account and submit your first quantum job in a few minutes.
 
 ## Step 1: Sign in
 
-Light Rider Cloud uses hosted sign-in (email/password or social login) — there's no separate registration form to fill out. From [platform.lightriderinc.com](https://platform.lightriderinc.com/), select **Create an account** (first visit) or **Log in** (returning). The same flow handles both; new accounts get a starter signup credit automatically.
+Light Rider Quantum uses hosted sign-in (email/password or social login) — there's no separate registration form to fill out. From [platform.lightriderinc.com](https://platform.lightriderinc.com/), select **Create an account** (first visit) or **Log in** (returning). The same flow handles both; new accounts get a starter signup credit automatically.
 
 ::: tip What you can do before signing in
 The [Backends](/platform/backends/catalog) catalog and [Applications](/platform/applications) are browsable without an account. The Quantum-Safe Signer application specifically works with no login at all. The Dashboard and Jobs pages require signing in.

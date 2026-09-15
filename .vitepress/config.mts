@@ -78,12 +78,12 @@ export default defineConfig({
     siteTitle: false,
 
     nav: [
-      { text: "Cloud platform", link: "platform/introduction" },
-      { text: "PQC", link: "pqc/policy" },
+      { text: "LR Quantum", link: "platform/introduction" },
+      { text: "LR PQC", link: "pqc/policy" },
 
-      { text: "EMS", link: "entropy/introduction" },
+      // { text: "EMS", link: "entropy/introduction" },
       {
-        text: "Launch Cloud platform",
+        text: "Launch Quantum platform",
         link: "https://platform.lightriderinc.com/",
       },
       { text: "Light Rider Website", link: "https://www.lightriderinc.com/" },
@@ -148,7 +148,7 @@ export default defineConfig({
           collapsed: true,
           items: [
             {
-              text: "What is Light Rider Cloud?",
+              text: "What is Light Rider Quantum?",
               link: "/platform/introduction",
             },
             { text: "Getting started", link: "/platform/getting-started" },
@@ -167,6 +167,10 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: "Catalog", link: "/platform/backends/catalog" },
+            {
+              text: "Rigetti Cepheus-1-108Q",
+              link: "/platform/backends/rigetti-cepheus-1-108q",
+            },
             {
               text: "Chiplets as Logical Qubits",
               link: "/platform/backends/cepheus-logical-qubits",
