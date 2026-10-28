@@ -82,10 +82,10 @@ export default defineConfig({
       { text: "PQC", link: "pqc/policy" },
 
       { text: "Entropy", link: "entropy/introduction" },
-      {
-        text: "Light Rider Cloud",
-        link: "https://cloud.lightriderinc.com/",
-      },
+      // {
+      //   text: "Light Rider Cloud",
+      //   link: "https://cloud.lightriderinc.com/",
+      // },
       { text: "Website", link: "https://www.lightriderinc.com/" },
     ],
 
