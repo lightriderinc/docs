@@ -8,11 +8,11 @@ hero:
   tagline: Documentation for Light Rider's products and services
   actions:
     - theme: brand
-      text: Get started with Cloud platform
+      text: Get started with Quantum
       link: /platform/getting-started
     - theme: alt
-      text: Get started with PQC
-      link: /pqc/policy
+      text: Get started with Entropy
+      link: /entropy/introduction
 
 
 features:
