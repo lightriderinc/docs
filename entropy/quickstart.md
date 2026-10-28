@@ -1,55 +1,79 @@
-# EMS quickstart
+---
+title: Quickstart
+---
 
-Request signed entropy from the Light Rider cloud in a few minutes.
+# Quickstart
+
+Draw quantum entropy from your own code and verify its receipt.
 
 ## 1. Get an API key
 
-Create or copy an API key from the [EMS account page](https://ems.lightriderinc.com/account). Keep it private.
+Sign in at [entropy.lightriderinc.com/developers](https://entropy.lightriderinc.com/developers) and generate an API key. The full key is shown once, so copy it when it is created.
 
-## 2. Install the official Python SDK
+Your key is the same key used on Light Rider Cloud. It gives full access to your account, so keep it out of public code and repositories.
+
+## 2. Set your API key
+
+macOS / Linux:
 
 ```bash
-pip install lightrider
+export LR_API_KEY="lr_live_YOUR_KEY"
+```
+
+Windows PowerShell:
+
+```powershell
+$env:LR_API_KEY = "lr_live_YOUR_KEY"
+```
+
+Google Colab: add the key under **Secrets** with the name `LR_API_KEY`, enable notebook access, then load it:
+
+```python
+import os
+from google.colab import userdata
+
+os.environ["LR_API_KEY"] = userdata.get("LR_API_KEY")
+```
+
+## 3. Install the SDK
+
+```bash
+pip install -U lightrider
 ```
 
 Python 3.9 or newer is required.
 
-## 3. Configure the cloud client
-
-```bash
-export LR_EMS_ENDPOINT="https://ems.lightriderinc.com"
-export LR_EMS_API_KEY="lr_..."
-```
+## 4. Draw and verify
 
 ```python
-from lightrider import EntropyClient, Policy
+import lightrider as lr
 
-with EntropyClient() as client:
-    client.fetch_verifier()
-    response = client.get_bytes(32, policy=Policy.QUANTUM_VERIFIED)
+r = lr.entropy.get(32, source="anu")    # 32 bytes from the ANU Quantum RNG
+print(r.hex)
+print(r.sources, r.request_id)
 
-print(response.bytes_.hex())
-print(response.receipt.quality_score)
-print(response.receipt.contributing_sources)
+assert lr.entropy.verify(r.receipt)     # the receipt is genuine
+assert lr.entropy.verify_commitment(r)  # these are the bytes it was issued for
 ```
 
-`fetch_verifier()` pins the active signing key. Later calls reject invalid receipts before returning bytes.
-
-## REST example
+## Using curl instead
 
 ```bash
-curl -X POST https://ems.lightriderinc.com/v1/entropy/request \
-  -H "Authorization: Bearer $LR_EMS_API_KEY" \
-  -H "content-type: application/json" \
-  -d '{"bytes":32,"policy":"quantum_verified"}'
+curl -s https://entropy.lightriderinc.com/api/v1/entropy \
+  -H "Authorization: Bearer $LR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -H "Idempotency-Key: $(uuidgen)" \
+  -d '{"bytes": 32, "mode": "source", "id": "anu"}'
 ```
 
-The response contains `bytes_hex` and a signed `receipt`.
+The response contains the bytes as `bytes_hex` and the signed `receipt`.
 
-## Limits
+## Cost
 
-- Request size: 1 to 65,536 bytes.
-- Authentication: `Authorization: Bearer <key>`.
-- Default policy: `highest_quality`.
+Each draw costs 1 credit ($0.01) per 256 bytes, with a minimum of 1 credit. A draw that fails is not charged. Credits can be purchased from the Entropy platform.
 
-Next: [Policies](/entropy/policies), [Multi-source extraction](/entropy/multi-source), and [Receipts](/entropy/receipts).
+## Next steps
+
+- [Python SDK](/entropy/python-sdk)
+- [Developer API](/entropy/developer-api)
+- [Receipts and verification](/entropy/receipts)

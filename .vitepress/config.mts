@@ -78,68 +78,52 @@ export default defineConfig({
     siteTitle: false,
 
     nav: [
-      { text: "LR Quantum", link: "platform/introduction" },
-      { text: "LR PQC", link: "pqc/policy" },
+      { text: "Quantum", link: "platform/introduction" },
+      { text: "PQC", link: "pqc/policy" },
 
-      // { text: "EMS", link: "entropy/introduction" },
+      { text: "Entropy", link: "entropy/introduction" },
       {
-        text: "Launch Quantum platform",
-        link: "https://platform.lightriderinc.com/",
+        text: "Light Rider Cloud",
+        link: "https://cloud.lightriderinc.com/",
       },
-      { text: "Light Rider Website", link: "https://www.lightriderinc.com/" },
+      { text: "Website", link: "https://www.lightriderinc.com/" },
     ],
 
     sidebar: {
       "/entropy/": [
         {
-          text: "Entropy Management System",
+          text: "Get started",
           collapsed: true,
           items: [
             {
-              text: "What is Light Rider EMS?",
+              text: "What is Light Rider Entropy?",
               link: "/entropy/introduction",
             },
             { text: "Quickstart", link: "/entropy/quickstart" },
+            { text: "Sources", link: "/entropy/sources" },
           ],
         },
         {
-          text: "Request entropy",
+          text: "Platform",
           collapsed: true,
-          items: [
-            { text: "Policies", link: "/entropy/policies" },
-            {
-              text: "Multi-source extraction",
-              link: "/entropy/multi-source",
-            },
-            { text: "Streaming entropy", link: "/entropy/streaming" },
-          ],
+          items: [{ text: "Entropy platform", link: "/entropy/platform" }],
         },
         {
-          text: "Verify & audit",
+          text: "Developers",
           collapsed: true,
           items: [
+            { text: "Developer API", link: "/entropy/developer-api" },
+            { text: "Python SDK", link: "/entropy/python-sdk" },
             { text: "Receipts & verification", link: "/entropy/receipts" },
           ],
         },
         {
-          text: "Operate",
+          text: "Hugging Face",
           collapsed: true,
           items: [
-            {
-              text: "Sources & collectors",
-              link: "/entropy/sources-collectors",
-            },
+            { text: "Demo Space & datasets", link: "/entropy/hugging-face" },
+            { text: "Provable datasets", link: "/entropy/datasets" },
           ],
-        },
-        {
-          text: "Build",
-          collapsed: true,
-          items: [{ text: "Synthetic data", link: "/entropy/synthetic-data" }],
-        },
-        {
-          text: "Reference",
-          collapsed: true,
-          items: [{ text: "API reference", link: "/entropy/api-reference" }],
         },
       ],
       "/platform/": [
